@@ -6,8 +6,6 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: bsandell {}
-
 explore: company_list {}
 
 explore: distribution_centers {}
@@ -34,7 +32,10 @@ explore: inventory_items {
   }
 }
 
-explore: order_items {
+explore: order_items
+{
+  persist_for: "4 hours"
+
   join: users {
     type: left_outer
     sql_on: ${order_items.user_id} = ${users.id} ;;
