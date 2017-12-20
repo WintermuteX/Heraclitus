@@ -20,6 +20,12 @@ explore: events {
 }
 
 explore: inventory_items {
+  always_filter: {
+    filters: {
+      field: product_department
+      value: "Men"
+    }
+  }
   join: products {
     type: left_outer
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
