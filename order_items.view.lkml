@@ -107,7 +107,7 @@ view: order_items {
 
   measure: sum_sale_price {
     type: sum
-    sql: SUM(${sale_price}) ;;
+    sql: (${sale_price}) ;;
   }
 
   measure: min_sale_price {
