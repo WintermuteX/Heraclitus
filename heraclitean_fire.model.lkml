@@ -69,5 +69,4 @@ explore: products {
   }
 }
 
-explore: users {
-  fields: [id, age, city, country, gender, count]}
+explore: users {}
