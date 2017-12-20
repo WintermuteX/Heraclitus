@@ -97,12 +97,12 @@ view: order_items {
 
   measure: max_sale_price {
     type: max
-    sql: MAX(${sale_price}) ;;
+    sql: (${sale_price}) ;;
   }
 
   measure: avg_sale_price {
-    type: max
-    sql: AVG(${sale_price}) ;;
+    type: average
+    sql: (${sale_price}) ;;
   }
 
   measure: sum_sale_price {
@@ -112,7 +112,7 @@ view: order_items {
 
   measure: min_sale_price {
     type: min
-    sql: MIN(${sale_price}) ;;
+    sql: (${sale_price}) ;;
   }
   # ----- Sets of fields for drilling ------
   set: detail {
