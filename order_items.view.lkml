@@ -95,6 +95,25 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+  measure: max_sale_price {
+    type: max
+    sql: MAX(${sale_price}) ;;
+  }
+
+  measure: avg_sale_price {
+    type: max
+    sql: AVG(${sale_price}) ;;
+  }
+
+  measure: sum_sale_price {
+    type: sum
+    sql: SUM(${sale_price}) ;;
+  }
+
+  measure: min_sale_price {
+    type: min
+    sql: MIN(${sale_price}) ;;
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
