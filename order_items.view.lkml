@@ -110,6 +110,12 @@ view: order_items {
     sql: (${sale_price}) ;;
   }
 
+  dimension: is_value_over_10 {
+    type: yesno
+    sql: ${sale_price} > 10 ;;
+  }
+
+
   measure: min_sale_price {
     type: min
     sql: (${sale_price}) ;;
