@@ -6,11 +6,13 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: company_list {}
+explore: company_list {
+}
 
 explore: distribution_centers {}
 
 explore: events {
+  sql_always_where: ${created_date} > (sysdate - 365) ;;
   join: users {
     fields: [users.id, users.country, users.email, users.state, users.age, users.first_name, users.last_name]
     type: left_outer
