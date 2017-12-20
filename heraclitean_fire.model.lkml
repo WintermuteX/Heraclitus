@@ -14,6 +14,7 @@ explore: distribution_centers {}
 explore: events {
   sql_always_where: ${created_date} > (sysdate - 365) ;;
   join: users {
+    view_label: "event users"
     fields: [users.id, users.country, users.email, users.state, users.age, users.first_name, users.last_name]
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
