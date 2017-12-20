@@ -79,4 +79,5 @@ explore: products {
   }
 }
 
-explore: users {}
+explore: users {
+}
