@@ -66,6 +66,11 @@ explore: order_items
     sql_on: ${products.distribution_center_id} = ${distribution_centers.id} ;;
     relationship: many_to_one
   }
+join: dt_locations {
+  type: left_outer
+  sql_on: ${dt_locations.order_item_id} = ${order_items.id} ;;
+  relationship: one_to_one
+}
 }
 
 explore: products {
