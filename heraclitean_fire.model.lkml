@@ -6,9 +6,6 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: company_list {
-}
-
 explore: distribution_centers {}
 
 explore: events {
