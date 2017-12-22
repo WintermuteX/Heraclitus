@@ -32,4 +32,19 @@ view: dt_locations {
     sql_latitude:${TABLE}.distribution_latitude ;;
     sql_longitude:${TABLE}.distribution_longitude;;
   }
+  dimension: order_item_id {
+    type: number
+    primary_key: no
+    sql: ${TABLE}.order_item_id ;;
+  }
+  dimension: inventory_item_id {
+    type: number
+    primary_key: no
+    sql: ${TABLE}.inventory_item_id ;;
+  }
+  dimension: product_id {
+    type: number
+    primary_key: no
+    sql: ${TABLE}.product_id ;;
+  }
   }
