@@ -47,4 +47,10 @@ view: dt_locations {
     primary_key: no
     sql: ${TABLE}.product_id ;;
   }
+  dimension: shipping_distance{
+    type: distance
+    start_location_field: distribution_location
+    end_location_field: user_location
+    units: kilometers
+  }
   }
