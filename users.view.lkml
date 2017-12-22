@@ -98,6 +98,10 @@ view: users {
 
   measure: count {
     type: count
+    filters: {
+      field: country
+      value: "UK"
+    }
     drill_fields: [id, first_name, last_name, events.count, order_items.count]
   }
   }
