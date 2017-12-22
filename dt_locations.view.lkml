@@ -10,7 +10,7 @@ view: dt_locations {
       order_items.user_id = u.id
       and products.distribution_center_id = d.id
       and inventory_items.product_distribution_center_id = d.id
-      and order_items.inventory_item_id = inventory_items.id
+      and order_items.inventory_item_id = inventory_items.id;;
     }
 
     dimension: user_id {
