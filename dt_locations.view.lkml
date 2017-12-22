@@ -12,6 +12,7 @@ view: dt_locations {
       and inventory_items.product_distribution_center_id = d.id
       and order_items.inventory_item_id = inventory_items.id
     }
+
     dimension: user_id {
       type: number
       primary_key: no
