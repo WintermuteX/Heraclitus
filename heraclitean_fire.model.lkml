@@ -83,3 +83,4 @@ explore: products {
 
 explore: users {
 }
+explore: dt_locations {}
